@@ -1,0 +1,149 @@
+* intro
+%% %% languages, design, implementation, practice
+%% %% TODO what are the themes!
+%% Languages currently fail to support a few common themes, and inelegantly express others
+%% %% what to say! about the research, idk
+
+
+%% Too often, programming is painful, boring, or routine.
+%% Reasons for this are many. 
+%% Moreover, contemporary research tends to assume a fatalistic tone 
+%% We have come a long way from running programs off punch cards.
+%% Today we have incremental compilation, extensible test suites, languages that look like English, and version control\textemdash a great selection of tools enhance programmer workflow and ability.
+%% Learning a text editor is a fantastic experience.
+%% New means of expression, new ways of thinking.
+
+%% what do I want to research
+
+%% %% Too flowery
+%% I intend to help with this progression.
+%% The thing about computing that caught me from the start and has kept my attention for so long is this feeling of great power and capability I get from writing a successful program.
+%% As a little kid with a Windows machine and some imagination, the opportunities to make cool things or finish chores quickly seemed endless.
+%% %% TODO what passion? What excitement? WHere is it?
+%% My intention in working towards a \phd would be to channel that passion and excitement into a tool others can use and be inspired by.
+
+%% If running for election, my party's tagline would be: ``to abolish the \texttt{NullPointerException}, offer stronger guarantees of success and more feedback on failure, and to help the builders of this world make things just a little bit faster and a little bit better.''
+%% Unfortunately, I cannot be much more specific than that. 
+%% Not now, not yet.
+%% My primary objective at this point is exploring research avenues and pinpointing the one in which I can do my best work.
+%% Which, let's face it is what I consider my biggest weakness as a candidate. 
+%% I am a bit of a late bloomer, a bit new.
+%% I have research experience, but very little, and nothing that I am exceptionally proud of.
+%% My teaching experience, on the other hand, has been overwhelmingly positive, but research is key, research is the endgoal, and research is lacking.
+%% Let me elaborate.
+
+%% %% %% okay, let's be honest here: you are not going to be writing your own damn type system. 
+%% %% I seek to create tools to make programming more enjoyable and effective.
+%% %% %% whether they be more expressive type systems, new and useful syntax features, or methods for unit testing or formal verification.
+%% %% %% fukk, you can't just say this without having read
+%% %% A great deal of contemporary PL research centers around making guarantees, providing a safety net, leveraging type systems. 
+%% %% %% Beautiful things, but at the core, boring
+%% %% TODO this paragraph is complete bullshit
+%% We have come a long way from running computer programs off punch cards.
+%% Modern developers have embraced tools like incremental compilation, version control, and unit testing as essential components of their workflow.
+%% %% hahaha, is it ``the art of'' or ``the science of'' or ...?
+%% As a result, computer programming 
+%% %% need more for on the horizon.
+%% On the horizon are theorem provers like Coq, which are advancing the state of the art towards even more rigorous and complete forms of verification.
+%% %% New languages allow users greater freedom of expression.
+%% %% Instead of using C as the end-all, the modern developer likely works with a handful of languages: Java for the main application, Rails for the web interface, Python scripts for experiments and patches
+%% %% Domain-specific languages are on the rise\textemdash whether for one firm (Workday's or Goldman's internal language), a target endpoint (Coffeescript, Sass), or a target audience (Microsoft's fun draw language)
+
+** disappointment
+%% research ups and downs
+However I am consistently disappointed by our inability to get results. 
+This is normal, I hear. 
+Disappointment is part of the game.
+Still, it is frustrating. 
+Still I want to express discontent.
+* testing
+** bubbles
+%% %% \subsection{Bubbles}
+%% One cs311 project in particular that I enjoyed was redesigning the automated test harness.
+%% It is a large and growing class, so the only feasible way to grade assignments fairly and completely is by running it against a suite of tests. 
+%% However, the course is taught in OCaml, which does not have any native testing capabilities. 
+%% There are external libraries, but they were not ideal for our needs. 
+
+%% At the time I joined staff, we used an in-house testing framework.
+%% It served our needs beautifully, running tests and creating postscript output, once one figured out how to use it. 
+%% Each project required a specific Makefile, and test functions demanded a very specific and multi-stage format.
+%% For example \texttt{string\_of\_input} and \texttt{string\_of\_output} functions were had to be explicitly given for each expected and received value.
+%% Also the harness relied on a heavy dose of \texttt{Obj.magic}, which ought to speak for itself.
+
+%% My contribution began as a side project, with the intention of offering unit testing to students.
+%% I created a large Python script which compiled and read OCaml modules and their corresponding tests, extracted the interfaces (and from the interfaces, extracted the test functions), and executed each unit test in a self-contained toplevel environment.
+%% This proved successful, and so I revised our test harness into a much cleaner framework.
+%% A simple test now takes two lines to write, instead of the usual 15, and the harness gracefully handles compiler warnings and debug statements.
+%% Overall, we have much less duplicate code associated with testing and many more staff members actively involved writing and executing tests.
+
+* teaching
+** misty-eyed
+The whole experience, from initially learning what a TA was, slowly realizing I could become one, and achieving that dream to beyond my expectations, has been almost surreal.
+%% College was not something I looked forward to. 
+%% University seemed, like High School or eating aparagus, like something I had to do because my family expected it.
+Arriving at Cornell as a sophomore, having been offered guaranteed transfer the previous year, the concept of undergraduate teaching assistants baffled me. 
+Professors and lecturers had to get training somewhere, I knew, but as undergraduates? 
+At a high-brow school like Cornell?
+Then, as a matter of course, I met these TAs. 
+They were larger than life. 
+%% TODO cut off
+Here were students just like myself, give or take a year, who were leading recitations, building challenging assignments, and offering advice and general know-how on everything from writing scheme interpreter to using a Makefile.
+I was blown away, in reverence, infatuated.
+In every respect they appeared smarter, better, and more knowledgable than I.
+Superhumans.
+At the same time; in fact, because of this opinion I held, they inspired me to do a little better, to work a little harder at my studies. 
+To spend time perfecting an assignment of Friday night instead of going out with friends, to read ahead and study when I would otherwise relax.
+I wanted to be like my TAs. 
+** learn to get help
+Above all else, the experience has taught me the importance of teamwork.
+Working to support that large and growing class, there were simply too many tasks for one person to keep up on. 
+As much as I would have liked to play a key role in each problem set released and proctor every exam, I simply could not do so and keep up with my studies. 
+I learned how to prioritize and better manage my time, how to complete tasks efficiently and avoid mistakes, yet this was not enough.
+%% But above all else, I learned when to ask for help.
+So I learned how to ask for help. 
+I learned how to formulate a question, how to divide a task into parallelizable parts, how to admit failure, how to share success, and how to realize when my understanding failed. 
+Working in that group context, where failure would affect myself, my friends, the Professor, and fellow students, taught me the crucial lessons of teamwork like no group assignment or class project ever could.
+* why phd
+** first
+%% \section{What is a PhD? To me}
+%% Why do I wish to earn a \phd? 
+%% First, let me answer a related question ``what is a \phd?''
+%% At face value, it's a title, a piece of paper. 
+%% A \phd is a great honor to have earned, certain to impress my family and likely to validate my achievements in the eyes of academics.
+%% However, the title itself is relatively meaningless to me. 
+%% %% Having one would only reflect my past (would it? it speaks too of future potential)
+%% Were it fame or prestige I sought, there are better ways to achieve it.
+
+%% Likewise, though a \phd opens up a few avenues for employment, applying for full-time industry positions now, and gaining experience in industry as a problem solver, would do more for my income and job security.
+
+%% A \phd carries some glamour, though.
+%% There is some allure to the idea of joining the club of academics, becoming a world expert in some part of the field.
+%% But that's all dreams. 
+%% And I need to discern whether I am more interested in the idea of getting a \phd or the \phd itself.
+
+
+%% \section{Priorities}
+%% What matters to me?
+%% - not money
+%% - not fame
+%% - not (cutting out all these things, do I devalue myself?)
+
+\section{Why PhD}
+%% Why do I need a \phd?
+%% Strictly speaking, I don't.
+%% A \phd will earn me a title and a place among academics.
+%% %% TODO nithign coming together
+%% Besides the serving as reconition, validation of what I have accomplished, 
+%% In other words, I do not need a \phd, a title on a scrap of paper.
+%% What I do need is to live and work in an environment where learning is encouraged, where innovation and creativity are paramount.
+%% %% hehehe awkward
+%% An environment where people are not driven by deadlines, managers, customers, or coffee, but rather by an intense, personal commitment to excellence.
+%% Indeed, an industry job would provide a suitable environment for what I want, to do good work %% MOAR
+** laboring
+%% I still labored under the assumption I had held since high school, that college was but a prerequisite for getting a high-paying job, after which I would be able to relax and enjoy adult life.
+%% However, the prospect of adult life or having lots of money never appealed to me. 
+%% Observing family and older acquaintances, I was always left wondering what the point was: why their work or paycheck mattered beyond covering the basic necessities.
+%% College and the opportunity to contribute to a research project showed me an alternative\textemdash an environment where people worked not to make money or impress colleagues but for the sake of learning, on behalf of the correct or the beautiful.
+
+* one liners
+%% Instead of pursing my studies and research in my free time, outside the bounds of an industry job which I may or may not love, in a \phd\ program I will have the privilege of working full-time on my \phd.
