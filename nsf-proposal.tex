@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage{statement}
+
+%% 
+\begin{document}
+%% Title:
+%% Code style makes it easier to read
+%% Keywords:
+%%
+
+\def\cpp{{\rm C\raise.5ex\hbox{\small ++}}}
+
+\subsection*{Background}
+
+No matter who you ask, code style is important.
+Every programmer, novice or experienced, has their own distinct way of writing and recommendations for making code beautiful and readable.
+Be it loops instead of recursion, aligned equal signs, or spaces instead of tabs, the variety of suggested best practices is rich.
+
+However well-styled code is more than pretty. 
+Design guidelines stem as much from useful methods of conceptualizing and approaching large problems as from aesthetic features like whitespace allocation and variable names.
+%% syled code is 
+Styled code is often readable and understandable both to the author and whomever else might wish to use it.
+Furthermore, readable and understandable code is easier to maintain and debug, so by adopting good style a programmer may save present and future effort.
+%% is such thing as objectively good and objectively bad style
+Along with this, there is such thing as objectively good and objectively bad style.
+Minified javascript code is horrendous stylistically, and well commented interfaces are so useful they are often considered necessary.
+In spite of the wide-ranging opinions and heated arguments over whether to use tail recursion or continuation-passing style, we can objectively define good style by determining which code is most readable and quickly understood by programmers.
+%% Style is more than the product of intuition or pedagogy but the product of experience.
+%% There are styles which have succeeded and styles which have failed, and we can learn from those.
+
+Yet to the best of my knowledge, only one widely cited work, Lieberherr et. al. (1988), resembles a formal study of code style \cite{lieberherr1988object}. 
+The paper offers guidelines for defining and structuring classes in object oriented languages, recommending that programmers employ a least-knowledge principle.
+This approach demands clear interfaces, suitable abstractions, and information hiding, three practices certain to decrease the scope of bugs and make code easier to extend.
+Benefits like these were manifest in the authors' work on the Demeter project, which in 1988 consisted of over 14,000 lines of Flavors and \cpp\ code written by over 100 students \cite[333]{lieberherr1988object}.
+They found that where the law was enforced, developers were much more effective, coding faster and suffering less downtime.
+
+%% Grandma Paradox
+This addresses a serious issue among programmers that I refer to colloquially as the Grandmother paradox.
+First introduced to me by my introductory Java teacher, the Grandmother paradox summarizes the findings of a small group of researchers who were impressed by the effects of Moore's Law on processing power and wanted to determine whether humans were getting faster too.
+Moore's law correctly hypothesized that the number of transistors on a chip would double bi-annually.
+Until this trend was recently limited by our ability to cool the increasingly dense and powerful processors\footnote{Not to mention the size of an atom}, it resulted in faster and faster processors over time.
+These researchers wondered if humans were not also getting faster over time; to this end they interviewed a number of people asking simple questions and recording their response time.
+As part of these interviews, they showed participants pictures of their own grandmother and consistently recorded response times of 0.1 seconds.
+These results are not significantly different from those of our recent ancestors. 
+Essentially, humans are not becoming smarter or faster; at least, not at a rate anything like that demonstrated by machines. 
+People are increasingly becoming the bottleneck in software developments. 
+One way to address this concern is to make tools designed to empower humans.
+
+Returning to the proposed suggestions of Lieberherr et. al., they were apparently right.
+Since publication, their rules\textemdash dubbed the Law of Demeter\textemdash  have been adopted in myraid industrial and academic settings, taught (if not enforced) widely.
+There is unanimous agreement that these rules for designing objects are readable and intuitive, help prevent bugs, and overall make better use of human capital.
+Hence if other such rules and heuristics exist, it behooves us to discover and advertise them.
+
+\subsection*{Proposed Work}
+I propose a formal inquiry into the question of what constitutes good style. 
+Instead of advancing personal opinions, techniques demonstrated successful in esoteric cases, or wild guesses, I intend to survey practitioners and objectively measure their response to varying presentations of the same code.
+
+To this end I would first gather a wide range of code examples. 
+The scope of code samples would range from implementations of common algorithms like binomial search to concurrent applications featuring multiple interdependent classes, the only limit being that samples should be parsable within approximately a half hour.
+Implemetations will vary over simple things like the use of \texttt{if} statements as opposed to guards or pattern-matching and various indentation schemes.
+As such they will be constructed using a variety of languages, beginning with popular ones like C and OCaml and ideally extending to rising or fringe languages like Coq.
+Utimately the scope of stylistic variations and examples should be such that both new and highly experienced programmers can find something they have never seen before in a language they have never used, as well as known algorithms that are only disguised in a syntax unfamiliar to the reader.
+
+The list of examples compiled, I would survey as many programmers as possible. 
+Experienced industry programmers, interns, students, novices, and professors are all useful candidates, each having their own opinions and habits.
+People who work exclusively in a single language as well as those who program in a variety of settings can offer unique insight. 
+Additionally those who review code for a living and give consulting help will have interesting perspectives.
+The goal is for as many different people as possible to review the set of wide-ranging code samples.
+
+To each I would present a subset of coding samples with a range of bugs.
+Participants would be asked to correctly identify the bug, and then asked to submit their opinion on the codes' aesthetic style.
+%% \begin{enumerate}
+%% \item What is the code doing? Describe the input and output of the function, or the overall goal of the module. Why did someone write this code and how do you expect it to be used?
+%% \item How would you rate this code in terms of style? Explain why you feel it is good or poor style.
+%% \end{enumerate}
+These responses would be timed, and this will present the key data of the survey.
+Individual opinions may prove useful and will be reviewed, but a static analysis of whether the participant correctly identified a function and how quickly they did so will form the backbone of my results.
+Response time and accuracy will form the proof of which code is well styled and which is hard to read, regardless of how applicants feel about the code.
+For example I personally find functional code beautiful and enjoyable to read, but I admit it takes me longer to understand a functional pearl than the comparable iterative or at least multi-line solution.
+If this opinion proves widespread, it would be taken as evidence that functional pearls should not be used in production code but rather keep their place as the subject of fun papers and presentations.
+
+Testing may take place in person, in a controlled setting, or online.
+Depending on the resources available, I would obviously take measures to legitimize the tests in the eyes of participants and better collect data on those taking the survey.
+However, this research could easily be conducted via a single website.
+The bottom line is to get as many people as possible to provide their judgements on what constitutes good style.
+Without quantity to support it, the research will be useless. 
+Additional parameters I would want to record about participants include age, occupation, and background, to categorize participants in the analysis; yet these are non-essential for the core of this project.
+
+Despite the great variety in participants, I expect that common patterns will emerge.
+Shared notions of sane inheritance hierarchies, understandable concurrency frameworks, and logically structured subroutines ought to become evident through the responses.
+
+
+\subsection*{Broader Impacts}
+%% NLP
+%% Psychology
+%% Culture
+%% Ultimately, we all have an intuition for what denotes good style. 
+%% These intuitions range from a variety of personal values and priorities, but advance worthwhile causes nonetheless.
+%% By identifying some of these heuristics, we can advance useful paradigms that will help future programmers make informed design decisions quickly and efficiently.
+%% %% gannny here?
+%% Again, the concrete goals of this project are to prevent bugs and increase individual productivity.
+%% Code that is easily understood is much easier to reason about and prove correct.
+%% However, these results on what makes a language readable have even wider impacts.
+The heuristics developed through this study are applicable to new languages or new language features. 
+They may be taken as general reading guidelines. 
+Designers wishing to support generic types or even dependent type annotations may use these results as readability guidelines, as directions for making features that are easy to pick up and remember.
+
+Additionally they may be used to develop pedagogical methods for introductory programming courses.
+Students often struggle with the way programming langauges work as almost-English-but-not-quite really, and slight modifications could greatly alleviate this barrier.
+Extending beyond the English language, we may compare responses from this study between programmers of different nationalities, finding what presentations work best for speakers of different languages.
+
+%% Focus groups and crowdsourcing are rarely the best approaches to design. 
+%% Conflicting opinions muddle the core design and satisfy no one. 
+%% However, the results from this proposed study are not purported to be a tool for designers seeking the most attractive or popular style.
+%% %% we emphasize readibility, common notions of what gets parsed fast
+%% Rather, the emphasis is on readability. 
+%% Participants are graded based on the time they take to understand given samples. 
+%% Styles which perform best in this study will be styles which lend themselves to easy reading, which is objectively a useful metric for designers.
+%% Based on that core, they may modify their proposal as they see fit.
+
+\bibliographystyle{amsplain}
+\raggedright
+\bibliography{nsf-proposal}
+\end{document}

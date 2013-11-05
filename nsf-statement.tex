@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage{statement}
+
+\begin{document}
+
+\newcommand{\sloc}{7.7 million lines}
+\newcommand{\numprojects}{43}
+
+%% TODO Throw in some references to STEM. No problem
+%% TODO drop rhetoricals
+%% TODO a little less focus on Ross
+
+\begin{center}
+\large{\textsc{Personal Statement}}
+\end{center}
+
+\subsection*{Intellectual Merit}
+I was never much interested in attending college.
+It seemed to me\textemdash at least the way my parents and high school counselors presented it\textemdash an expectation or obligation, almost like a dentist appointment. 
+College was something I had to complete as a prerequisite for getting a good job.
+And then what? 
+After high school and college, how would I be remembered, what changes would I have made, what could I be proud of?
+There was nothing in my current work that inspired me beyond plain responsibility.
+
+%% %% 2013-11-04: Superfluous I think
+%% Never mind, I told myself, and kept working.
+%% Not too hard, because I was also interested in life outside the classroom and high school was easy enough to succeed in without much study, but working nonetheless.
+%% Then college arrived. 
+%% College was different, but not substantially.
+%% On one hand, I appreciated the increased freedom and open learning environment; however, I struggled to do well and had little concern for my GPA, which I felt was but a skewed reflection of the key goal: how much I had learned.
+
+Despite this lack of interest, I performed well enough during the first two years of my college career, joining the Phi Theta Kappa honor society and getting a short work published by the English department.
+Additionally, I volunteered at a local nursing home every Sunday and the Boys \& Girls club select weekdays and maintained part-time employment in two small businesses to help pay my tuition.
+These commitments taught me the importance of responsibility and the intricacies of working with other people. 
+More than once I diverted my evening to fill in for a co-worker\textemdash not just because I was asked to but because the business would fail if an employee did not arrive\textemdash and many times at the nursing home I comforted angry or delusional residents.
+
+Still, I failed to take a genuine interest in my collegiate work and in retrospect I find this unacceptable. 
+Thankfully I may use the term ``retrospect'' 
+My opinion changed.
+Friends encouraged me to take courses in computer science and the challenging problems mixed with the alluring power of manipulating a computer kept my attention.
+The course staff in particular inspired me to succeed and continue taking CS courses, despite my relatively weak background in computer science and mathematics.
+Not because they gave me tutoring or advice, but because their love for the material proved contagious, inspiring me to work harder than ever on the assigned problems.
+%% Examples of how I succeeded in class
+My final project for introductory CS was a naive but comprehensive recommendation system which analyzed nodes' degree and position in the graph topology in conjunction with results from a personal questionairre.
+The assignment was open ended and I went far with it.
+In one later class I built a tournament-winning AI, and in another created a network honeypot with a partner which analyzed packets at a rate of 70Mb/s, over seven times the class average.
+
+These achievements combined with an enthusiasm manifest by over 150 contributions to the course Q/A page earned me a position on staff for CS311, a course in functional programming. 
+This was an tremendous personal honor and motivated me more than ever before; working alongside Professors Nate Foster, Ramin Zabih, and Robert L. Constable has been incredible.
+Since joining staff I have remained among the top three contributors to the online forum, led recitations for sections of approximately 30 regularly attending students, played a large role in the release of 5 large problem sets and the testing of 11, suggested questions for 8 exams, become manager of the staff version control repository, completely rewriten the automated test harness, and spent many long hours grading.
+Also I consistently forget to eat dinner, call home, and observe national holidays.
+Work is rather more fun for me now than breaks or vacations.
+
+
+%% Rentenna
+Immediately following my first Spring on couse staff I took a summer position at Rentenna Inc. 
+Here I was introduced to the world of software engineering in the context of a blooming startup. 
+As one of two developers on the project, I engaged in all parts of the development cycle including identifying bugs and open problems, writing test suites, and monitoring server logs.
+The climax of this experience was designing and writing the REST api linking the client application, written in Coffeescript, to the in-house Python application.
+Here I worked closely with my mentor and significantly revised both my design and implementation numerous times in order to achieve the best, most elegant execution.
+Over the summer, my contributions encompassed 308 commits with over 200,000 additions and over 150,000 deletions.
+When the school year began anew I stayed on as a part-time developer, and since that first summer my career contributions to Rentenna have more than tripled.
+
+%% classes that qualify me
+The following Fall I took the core programming language course and thoroughly enjoyed the material.\footnote{Additionally I learned \LaTeX, which has become almost a hobby.}
+This semester I am taking the Masters level compilers course, which though incredibly challenging has provided a rewarding mix of progamming languages and systems topics. 
+Next semester I look forward to taking the graduate level programming languages course. %% and writing my first CPS translations to the $\lambda$-calculus. 
+%% The previous course only mentioned how this was possible.
+
+%% Ross
+%% Hope to continue via research, and have started already
+This past summer represented a turning point for me, where instead of returning to industry I remained in Ithaca doing research with Professor Ross Tate on formalizing a commonplace yet theoretically rich practice in object-oriented programming.
+Working with Ross has been an adventure.
+What began as a summer opportunity to experience undergraduate research has developed into a Masters project and imminent PLDI submission.
+While at times difficult\textemdash much of my summer was spent conducting static analysis of \sloc\ of Java code\textemdash this research opportunity has affirmed my desire to remain in an academic environment.
+%% Here is an environment in which I perform to the best of my abilities, where I can draw inspiration from those around me and  learn and teach to provide the greatest broad impact.
+Research has been a challenge, a call to do better, more imaginitive work; coincidentally, creative work analogous to my most successful coursework.
+I am proud of the research that I do, not because it will reflect well on or benefit me, but because the concept in itself is beautiful and deserves to be explored and shared.
+That is the purpose I had previously been seeking: an occupation I would love for itself.
+
+\subsection*{Broader Impact}
+This is not to say that my current research is lacking with respect to practical use or broader impact.
+Far from it, Professor Tate's proposal was inspired by a review of existing code and talks with developers from a variety of companies.
+As such it has direct applications to all engineers working in object oriented languages, the theoretical results nowithstanding.
+
+He observed a division among types in object-oriented languages: they are often used either as data or describing data, with a clear separation between the two uses.
+Interfaces like \texttt{java.lang.Comparable} are used exclusively to define how other types, for example the elements of a list, may be used.
+This is orthogonal to the familiar separation of types into interfaces, which are the signatures, and classes, which serve as implementations.
+In our formalism, as in that of classes and interfaces, two broad categories create a useful paradigm for organizing code and encouraging modularity.
+
+Indeed, my individual work over the summer confirmed that industry developers have already been using this model.
+This practical support indicates that these rules already match common-sense intuition for how complex type definitions ought to work.
+Hence in formalizing this concept we capture and affirm a useful model, providing clear rules and semantics for developers of object oriented code, which the overwhelming majority of industry.
+
+Thus far I have hinted at the theoretical results of my work with Professor Tate but refrained from describing them.
+The main result is that subtyping judgements become decidable under this formalization. 
+%% %% Barring discussion of the full scope of new type system features or potential extensions, the main result is that subtyping judgements become decidable. 
+Currently valid programs for seemingly-reasonable datatypes may throw compilers into cyclic or diverging computations, the rules we offer allow compilers to compare types accurately and efficiently using a simple algorithm.
+%% This is possible because these types which describe data are the site of all recursive definitions in the type system.
+%% Languages currently set no restrictions on contravariant or expansive recursive type definitions, but under our guidelines these features will be quarantined, allowing us to make crucial assumptions about the class table.
+%% Furthermore, we claim this quarantine is backwards compatible based on the results of the static analysis, which showed that no programs across our explored set of \numprojects\ projects violated the restrictions.
+Multiple authors, Ross included, have proposed other type system restrictions that would make subtyping decidable. 
+Yet none of the suggestions to date have been accepted.
+They were either too restrictive, demanding a language overhaul, or too confusing for practical use.
+Here we describe a pattern that avoids these shortcomings because it is already in use.
+We simply take advantage of its consequences for subtyping; this is an entirely different approach.
+Hence we expect the impact of this paper to reach well beyond the academic community as a concrete implementation in a modern object oriented language.
+
+%% Additionally education. Didn't do the work for research but am quite able to translate to English
+%% there's the teaching to talk about . XXX students have flown through
+Additionally, my current and ideally future work as a teaching assistant has had a broad impact on my Cornell community. 
+CS311 is a large and growing course.
+When I was enrolled, nearly 100 students took the final exam.
+This semester, approximately 250 students have completed the first half of the course; totalling over the 4 semesters I have been involved sums to over 500 students I have interacted with.
+Teaching provides me with opportunities to meet these students in classroom and one-on-one settings.
+Feedback I have received informally and through TA evaluations has consistently been positive, especially regarding my own pervasive enthusiasm.\footnote{My favorite comment was from a Fall 2012 evaluation: ``I have to imagine that if functional programming were a person, he would want to marry it. It's adorable.''}
+Just as my TAs inspired me to pursue a career in computer science, I have been able to get my students motivated about and engaging with the material.
+To me, that is a great accomplishment.
+To have met and impacted such a number of fellow students whom will in turn go on to have their own great successes is a blessing.
+
+%% always give the story
+%% what did I learn?
+%% 
+\end{document}
