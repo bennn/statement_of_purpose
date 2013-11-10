@@ -7,6 +7,8 @@
 \texttt{<your-college-here>}
 }
 
+%% TODO teaching should be part of a story, beware that it is not taking away precious space
+
 %% TODO tips from Jonathan
 %% -- sound attractive. Tell how you're in demand
 %% -- give numbers. All about numbers. For research, for TA
@@ -38,82 +40,61 @@
 %% 2013-10-16: Statement is my own words. Not Adam's, not Amal's, not Fabian's not Ross's not Bill's. Mine.
 %% GOAL: say you want to do PL research. Give a sort of research statement. 
 %% Initial sentences should lead in to me wanting to study PL
-Computer programming ought to be a delightful, empowering activity. 
-Not an occupation, not a chore, task, or routine, but an activity.
-Too often, it is not. 
-%% inability to express certain ideas, lack of fluency, usefullness, 
-Language barriers like cryptic error messages, insufficient freedom of expression, and poor feedback mechanisms prevent users from accomplishing their goals in an enjoyable or timely manner.
-This is a problem.
-The machines we have at our disposal have incredible raw computing strength, but unless humans can interface with and direct this potential it will remain dormant. 
-%% Second, it's just plain inspiring to work with a computer and find yourself doing great things just like that.
-I wish to study programming languages so that I may develop tools that will keep computer programming fun, refreshing, and productive.
-%% %% art vs. science is too general. Way too general
-%% To develop it further as both an art\textemdash a means of creative expression, a conduit for realizing ideas and running experiments\textemdash and a science\textemdash a formalized procedure for solving difficult problems or organizing large projects.
+I was never much interested in attending college.
+It seemed to me\textemdash at least the way my parents and high school counselors presented it\textemdash an expectation or obligation, almost like a dentist appointment. 
+College was something I had to complete as a prerequisite for getting a good job.
+And then what? 
+To be completely honest I was afraid of giving up books and essay writing in favor of a university education as a techie, with the ultimate goal being a high-paying industry job where I leveraged a tiny skillset and let other abilities decline. 
+An unrealistic vision perhaps, but it bothered me. 
 
-\section{Current Research}
-%% Slide into current research, eliding need for me to say exactly what I wanna do.
-These tools can take a wide variety of forms. 
-Incremental compilation, version control, and unit testing are indispensible tools to modern developers.
-On the horizon are proof assistants, which offer rigorous and increasingly easy-to-build formal proofs of correctness.
-%% In the near future, proofs will take the place of unit tests in large-scale systems.
-Additionally, new features are constantly being suggested and added to improve existing languages.
+Three years later I had found a calling that fully suited me, that I could be take pride in and produce great things. 
+I want to be a computer scientist and research programming languages to develop tools that solve mechanizable issues and let programmers focus on the critical problems.
 
-Here, my current research provides an example.
-%% Describe project, high level. TODO ask Ross what level of detail is OK
-Since Summer 2013, I have worked with Professor Ross Tate on formalizing a new paradigm for object-oriented languages.
-The proposal is to define a new, broad division among objects, orthogonal to the separation between classes and interfaces.
-Just as an interface or abstract class provides the signature for fully implemented classes, Professor Tate observed that classes and interfaces like Java's \texttt{Comparable} describe how objects are manipulated with other objects.
-One never seeks to use, for example, a list of object \texttt{Comparable}.
-However, one often wants a list of some generic type implementing that interface.
-Hence there is a distinction between classes and interfaces in the traditional sense and classes and interfaces which are used to bound type parameters; furthermore, enforcing this distinction yields useful results for the entire type system.
+\section{Personal Background}
 
-My involvement began as a summer opportunity to experience research and has since translated into a major role as part of a PLDI submission.
-Over the summer, I compiled and analyzed existing Java code to determine whether the division Professor Tate had observed in isolated cases was in fact a widespread pattern.
-First, I wrote a small program to graph and analyze the inheritance hierarchy of a Java project, identifying any cycles created by subtyping definitions.
-%% The message, before I get to the footnote, is that I wrote this shit myself. I had help _ inspiration but I wrote it
-This program consisted of an abbreviated execution of the OpenJDK compiler, to obtain the inheritance hierarchy, and a Python script to create the inheritance graph and find the cycles.\footnote{In retrospect, the NetworkX library would have been completely sufficient. Still, finding and implementing the cycle-finding algorithm was a pleasure.}
-Then I modified the open JDK compiler to log a notification whenever the source code broke invariants devised by Professor Tate.
-\numprojects\ projects and \sloc\ of code later, we found only a few instances where the code broke our assumptions.
-However these ``violations'', instead of presenting cause for alarm, affirmed our conviction in the proposed features\textemdash in every occasion, flagged code was attempting to implement our proposed feature.
-%% Programmers had already identified and attempted to correct the insufficiency, albiet in ad-hoc locations and use cases.
+The spark began with my first programming class, where I realized computer science is where creativity and efficicacy meet. 
+That first semester I designed an implemented a na\"ive but full-featured friend recommendation system for a model social network.
+In a later class I built a tournament-winning AI, and in another created with a classmate a network honeypot which analyzed packets at a rate of 76Mb/s, over seven times the class average.
+Throughout my undergraduate career, I have been most engaged and successful in the free, open-ended projects which asked students to define their full scope.
 
-Presently, Professor Tate, \phd\ student Fabian M\"{u}lb\"{o}ck, and I have been working to prove theorems about type systems under the new paradigm and writing a paper summarizing these result thus far.
-Fabian and I developed, with considerable help from Professor Tate, a suitable measure on subtyping judgements.
-At this point we are working more independently on writing the first revisions of the paper.
-I do not assert to have played a significant role in the identifying the problem, formulating the solution, or proving the results.
-Professor Tate had already been working on this project when he gave me the opportunity to work with him, and has offered invaluable feedback correcting my understandings and keeping me motivated and productive while performing the static analysis and developing the measure.
-However, I feel that I have contributed greatly in turning ideas into readable, communicative English.
-Once I have fully grasped a concept, I take pride in deing able to explain it well to another person.
-This, I feel, is one of my greater strengths, and one which I seek to further develop.
+Outside of class, I took a summer job at the tech startup Rentenna, a social-based approach to finding apartments, where I had further opportunities to discover open problems and find creative solutions.
+For example, at one point we sought to integrate data from a variety of external sources, but could not deliver property-level data in real time.
+To solve this, I devised and wrote a wrapper for our database which cached results at the block or neighborhood level, refreshing lazily approximately weekly.
+Overall, the fast-paced work environment was inspiring and the opportunities available were tempting; however, the experience was somewhat lacking.
+The difference, I think, was the tone. 
 
-\section{Teaching}
-%% transition into 3110
-Indeed, one of the most valuable experiences from my undergraduate career has been working as staff for cs311, a first course in functional programming.
-%% What did I do
+At my other job, as course staff at Cornell, things are different.
+The other consultants for that class delight in coming to work; when I took the class myself I was rapt with their almost fanatic devotion to the course. 
+My own feedback, received informally and through TA evaluations, has consistently been positive, especially regarding my own pervasive enthusiasm.\footnote{My favorite comment was from a Fall 2012 evaluation: ``I have to imagine that if functional programming were a person, he would want to marry it. It's adorable.''}
+This job in this academic environment is special.
+
 During the 4 semesters I have been on staff, I have led recitations for a section of approximately 30 regularly attending students, played a large role in the release of 5 problem sets and the testing of 11, suggested questions for 8 exams, managed the staff version control repository, completely rewriten the automated test harness, and spent many hours grading.
-%% What did I learn
-%% resposiblity 
-%% time management
-%% endurance
-%% patience
-%% how to explain things
-%% better listener
+Above all else, the experience has taught me the importance of accountability and the difference between ideas and concrete actions.
+More than once I have stepped in to fix crises like botched problem sets and compromised exam questions, and I have seen many good ideas\textemdash for example requesting students submit a patch if their assignment failed to compile, as opposed to having course staff unfamiliar with the code attempt to debug it\textemdash go unimplemented for lack of initial effort.
+That particular issue I stepped in to execute, but others unfortunately remain dormant.
 
-Above all else, working on staff has taught me the difference between ideas and concrete actions.
-Case in point, the bane of our automated grading scripts have always been compilation errors in student code.
-They require manual debugging and disrupt our grading workflow. 
-Last fall, a staff member suggested we ask students to submit a patch to their code which we could apply quickly, and then grade as normal.
-A fine idea, ready for adoption but for a few scheduling issues; however, it was not until a year later, when I rewrote the test harness, that our pipeline incorporated the generation and delivery of emails to students and a mechanism for verifying patches.
-The entire staff had agreed it was a good policy, but we preferred, myself included, to suffer another year of compile errors unabated.
-Someone had to build the feature.
-In retrospect I am glad I got to it first\textemdash I have learned a lot from that project\textemdash still it was a jarring reminder of the distance between a theory and its practical application.
+%% TODO commas
+This growing appreciation for the academic community, coupled with the special interest I took in the functional programming and upper-level programming languages courses ultimately guided my decision to explore PL research.
+Fortunately, I met Professor Ross Tate and he generously found and offered a summer project for me to work on.
+My job began with static analysis of existing Java programs and slowly translated into a Masters project culminating in a PLDI submission.
+
+\section{Research}
+Research has been a many-faceted and fulfilling experience.
+What I enjoy most, what motivates me, is that we are providing solutions to keep computer programming enjoyable and empowering.
+Working with a computer should not be considered an occupation, not a chore, task, or routine.
+It is an empowering activity, working with a tool that leverages your own intelligence and capability to their fullest.
+
+Our current project consists of formalizing a new paradigm for object-oriented languages.
+The proposal is to define a new division among types, orthogonal to the separation between classes and interfaces.
+We make clear a distinction between type parameters which permit resursive subtyping definitions and type parameters in the traditional sense.
+This division, already respected in practice, happens to solve the problem of undecidable subtyping that has been a puzzle for theoreticians since the widespread acceptance of generics into industry languages.
+Previous efforts had identified appropriate restrictions, solving the problem from an algorithmic standpoint, but failed to capture programmer intuition.
+Here is what separates our contribution: instead of devising some new strategy or rule to impose, the proposal draws inspiration from the develops using the languages in question.
+We provide a formalism which neatly resolves theoretical and practical desires; ultimately, this is something which a great many programmers will use to guide their designs and intuition in the future.
+That is a humbling effect to have been a part of.
+I sincerely hope to contribute to similar ideas and novel solutions throught my own career.
 
 \section{Why a \phd}
-%% What do they wanna hear? That I want a phd to do research?
-%% I  think the sentence on teaching should go, but it make a nice hook. 2013-10-29 you live for now.
-Teaching has been a wonderful and rewarding experience, and I hope to one day teach at the university level.
-That provides one motivation for seeking \phd.
-But while teaching inspires me, it is not what drives me.
 
 Before working this summer with Ross, I had only a faint, admittedly romanticized idea of what research was like.
 My initial goal with the project was just to try something different, while the opportunity was available, and get an industry job the following year.
@@ -126,20 +107,18 @@ Classes and textbooks now appear to me as living resources that offer guidance f
 The problems we have worked on and the problems my colleagues here are working on are exciting and motivating.
 We are not building popular or profitable things, but correct and beautiful things.
 I want to continue in this line of work, to answer the demands for more streamlined programming outlined in my introduction.
-These things in mind, I would be doing myself a disservice if I did strive to remain in an academic environment, contributing with a \phd.
+From where I stand today, an academic setting is the premier location to pursue these goals.
 
-I want \texttt{<this-phd-program>} in particular because \_\_\_\_\_\_\_.
-%% all the great things about \university
-%% TODO moar
-%% Hence I would be doing myself a tremendous disservice if I did not pursue a \phd.
+Language barriers like cryptic error messages, insufficient freedom of expression, and poor feedback mechanisms prevent users from accomplishing their goals in an enjoyable or timely manner.
+This is a problem.
+The machines we have at our disposal have incredible raw computing strength, but unless humans can interface with and direct this potential it will remain dormant. 
+I wish to study programming languages so that I may develop tools that will keep computer programming fun, refreshing, and productive.
+These tools can take a wide variety of forms. 
+Incremental compilation, version control, and unit testing are already indispensible tools to modern developers.
+On the horizon are proof assistants, which offer rigorous and increasingly easy-to-build formal proofs of correctness.
+I want to be a part of this rising wave of empowering programmers through smart tools and automation.
 
-%% %% Ending
-%% %% TODO comes off as pompous, wanna channel more friendly
-%% %% hehehe
-%% If I have misjudged the situation, please correct me. 
-%% If \university is in fact a strictly bureaucratical institution where new and challenging ideas are sometimes ignored in favor of popular, safe, or profitable alternatives, do let me know.
-%% If research and teaching are secondary motives, please tell me, so I can make an informed decision.
-%% Otherwise, 
-Hope to join you in the Fall.
+%% I want \texttt{<this-phd-program>} in particular because \_\_\_\_\_\_\_.
+%% Hope to join you in the Fall.
 
 \end{document}

@@ -103,6 +103,15 @@ I learned how to prioritize and better manage my time, how to complete tasks eff
 So I learned how to ask for help. 
 I learned how to formulate a question, how to divide a task into parallelizable parts, how to admit failure, how to share success, and how to realize when my understanding failed. 
 Working in that group context, where failure would affect myself, my friends, the Professor, and fellow students, taught me the crucial lessons of teamwork like no group assignment or class project ever could.
+** about the harness
+%% Above all else, working on staff has taught me the difference between ideas and concrete actions.
+%% Case in point, the bane of our automated grading scripts have always been compilation errors in student code.
+%% They require manual debugging and disrupt our grading workflow. 
+%% Last fall, a staff member suggested we ask students to submit a patch to their code which we could apply quickly, and then grade as normal.
+%% A fine idea, ready for adoption but for a few scheduling issues; however, it was not until a year later, when I rewrote the test harness, that our pipeline incorporated the generation and delivery of emails to students and a mechanism for verifying patches.
+%% The entire staff had agreed it was a good policy, but we preferred, myself included, to suffer another year of compile errors unabated.
+%% Someone had to build the feature.
+%% In retrospect I am glad I got to it first\textemdash I have learned a lot from that project\textemdash still it was a jarring reminder of the distance between a theory and its practical application.
 * why phd
 ** first
 %% \section{What is a PhD? To me}
@@ -147,3 +156,68 @@ Working in that group context, where failure would affect myself, my friends, th
 
 * one liners
 %% Instead of pursing my studies and research in my free time, outside the bounds of an industry job which I may or may not love, in a \phd\ program I will have the privilege of working full-time on my \phd.
+
+* 2013-11-10
+%% What do they wanna hear? That I want a phd to do research?
+%% I  think the sentence on teaching should go, but it make a nice hook. 2013-10-29 you live for now.
+Teaching has been a wonderful and rewarding experience, and I hope to one day teach at the university level.
+That provides one motivation for seeking \phd.
+But while teaching inspires me, it is not what drives me.
+Just as an interface or abstract class provides the signature for fully implemented classes, Professor Tate observed that classes and interfaces like Java's \texttt{Comparable} describe how objects are manipulated with other objects.
+One never seeks to use, for example, a list of object \texttt{Comparable}.
+However, one often wants a list of some generic type implementing that interface.
+Hence there is a distinction between classes and interfaces in the traditional sense and classes and interfaces which are used to bound type parameters; furthermore, enforcing this distinction yields useful results for the entire type system.
+
+\section{Current Research}
+%% Slide into current research, eliding need for me to say exactly what I wanna do.
+These tools can take a wide variety of forms. 
+Incremental compilation, version control, and unit testing are indispensible tools to modern developers.
+On the horizon are proof assistants, which offer rigorous and increasingly easy-to-build formal proofs of correctness.
+%% In the near future, proofs will take the place of unit tests in large-scale systems.
+Additionally, new features are constantly being suggested and added to improve existing languages.
+
+Here, my current research provides an example.
+%% Describe project, high level. TODO ask Ross what level of detail is OK
+Since Summer 2013, I have worked with Professor Ross Tate on formalizing a new paradigm for object-oriented languages.
+The proposal is to define a new, broad division among objects, orthogonal to the separation between classes and interfaces.
+Just as an interface or abstract class provides the signature for fully implemented classes, Professor Tate observed that classes and interfaces like Java's \texttt{Comparable} describe how objects are manipulated with other objects.
+One never seeks to use, for example, a list of object \texttt{Comparable}.
+However, one often wants a list of some generic type implementing that interface.
+Hence there is a distinction between classes and interfaces in the traditional sense and classes and interfaces which are used to bound type parameters; furthermore, enforcing this distinction yields useful results for the entire type system.
+
+My involvement began as a summer opportunity to experience research and has since translated into a major role as part of a PLDI submission.
+Over the summer, I compiled and analyzed existing Java code to determine whether the division Professor Tate had observed in isolated cases was in fact a widespread pattern.
+First, I wrote a small program to graph and analyze the inheritance hierarchy of a Java project, identifying any cycles created by subtyping definitions.
+%% The message, before I get to the footnote, is that I wrote this shit myself. I had help _ inspiration but I wrote it
+This program consisted of an abbreviated execution of the OpenJDK compiler, to obtain the inheritance hierarchy, and a Python script to create the inheritance graph and find the cycles.\footnote{In retrospect, the NetworkX library would have been completely sufficient. Still, finding and implementing the cycle-finding algorithm was a pleasure.}
+Then I modified the open JDK compiler to log a notification whenever the source code broke invariants devised by Professor Tate.
+\numprojects\ projects and \sloc\ of code later, we found only a few instances where the code broke our assumptions.
+However these ``violations'', instead of presenting cause for alarm, affirmed our conviction in the proposed features\textemdash in every occasion, flagged code was attempting to implement our proposed feature.
+%% Programmers had already identified and attempted to correct the insufficiency, albiet in ad-hoc locations and use cases.
+
+Presently, Professor Tate, \phd\ student Fabian M\"{u}lb\"{o}ck, and I have been working to prove theorems about type systems under the new paradigm and writing a paper summarizing these result thus far.
+Fabian and I developed, with considerable help from Professor Tate, a suitable measure on subtyping judgements.
+At this point we are working more independently on writing the first revisions of the paper.
+I do not assert to have played a significant role in the identifying the problem, formulating the solution, or proving the results.
+Professor Tate had already been working on this project when he gave me the opportunity to work with him, and has offered invaluable feedback correcting my understandings and keeping me motivated and productive while performing the static analysis and developing the measure.
+However, I feel that I have contributed greatly in turning ideas into readable, communicative English.
+Once I have fully grasped a concept, I take pride in deing able to explain it well to another person.
+This, I feel, is one of my greater strengths, and one which I seek to further develop.
+
+Language barriers like cryptic error messages, insufficient freedom of expression, and poor feedback mechanisms prevent users from accomplishing their goals in an enjoyable or timely manner.
+
+\section{Teaching}
+%% transition into 3110
+Indeed, one of the most valuable experiences from my undergraduate career has been working as staff for cs311, a first course in functional programming.
+During the 4 semesters I have been on staff, I have led recitations for a section of approximately 30 regularly attending students, played a large role in the release of 5 problem sets and the testing of 11, suggested questions for 8 exams, managed the staff version control repository, completely rewriten the automated test harness, and spent many hours grading.
+
+Above all else, working on staff has taught me the difference between ideas and concrete actions.
+Case in point, the bane of our automated grading scripts have always been compilation errors in student code.
+They require manual debugging and disrupt our grading workflow. 
+Last fall, a staff member suggested we ask students to submit a patch to their code which we could apply quickly, and then grade as normal.
+A fine idea, ready for adoption but for a few scheduling issues; however, it was not until a year later, when I rewrote the test harness, that our pipeline incorporated the generation and delivery of emails to students and a mechanism for verifying patches.
+The entire staff had agreed it was a good policy, but we preferred, myself included, to suffer another year of compile errors unabated.
+Someone had to build the feature.
+In retrospect I am glad I got to it first\textemdash I have learned a lot from that project\textemdash still it was a jarring reminder of the distance between a theory and its practical application.
+
+solving 
