@@ -1,4 +1,4 @@
-all: ben nsf prop
+all: ben
 
 ben:
 	TEXINPUTS="sty/:" xelatex statement.tex
