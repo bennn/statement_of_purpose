@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{statement}
 
+\renewcommand{\maketitle}{\textsf{\large Benjamin Greenman \hfill{} Personal Statement}\\ \hrule}
+
 \begin{document}
 \newcommand{\phd}{Ph.D.}
 \newcommand{\university}{%
@@ -11,6 +13,10 @@
 
 \newcommand{\sloc}{13.6 million lines}
 \newcommand{\numprojects}{43}
+
+\vspace{-2cm}
+
+\maketitle
 
 %% Research statement, not personal statement
 
@@ -41,37 +47,39 @@ I was never much interested in attending college.
 It seemed to me\textemdash at least the way my parents and high-school counselors presented it\textemdash an expectation or obligation, almost like a dentist appointment. 
 College was something I had to complete as a prerequisite for getting a good job.
 And then what? 
-To be completely honest I was afraid of giving up the liberal studies I had enjoyed in high school in favor of a university education as a techie, with the ultimate goal being a high-paying industry job where I leveraged a tiny skillset and let other abilities decline. 
+To be completely honest I was afraid of future where I leveraged a tiny skillset and let other abilities decline. 
+%% giving up the liberal studies I had enjoyed in high school in favor of a university education as a techie, with the ultimate goal being 
 An unrealistic vision perhaps, but it bothered me. 
 
-%% Do NOT want to sound like a jack-of-all, master of none. Though it's an apt description.
-My interests were, and still are, many and eclectic.
-The creativity surrounding literature and language, the security of proofs and formal reasoning, and the practicality of computational tools all appealed to me. 
-More time spent in class drew me closer towards these interests and further inspired me to learn more, to care increasingly about schoolwork.\footnote{A prime example is my first encounter with proofs. Before college, Math was boring, Math was computation. Though I fared miserably in my first proof-based class at Cornell, it made me realize that Math is not computation but rather imagination. Math is art.}
-%% Outside of class I would be equally happy exploring the woods or skateboarding through town.
-Still, I might have set upon one general area and let others rest as hobbies; indeed, that was the eventual plan until I discovered the field of programming languages, where these seemingly disparate interests meet.
+%% %% Do NOT want to sound like a jack-of-all, master of none. Though it's an apt description.
+%% My interests were, and still are, many and eclectic.
+%% The creativity surrounding literature and language, the security of proofs and formal reasoning, and the practicality of computational tools all appealed to me. 
+%% More time spent in class drew me closer towards these interests and further inspired me to learn more, to care increasingly about schoolwork.\footnote{A prime example is my first encounter with proofs. Before college, math was boring, math was computation. Though I fared miserably in my first proof-based class at Cornell, it made me realize that math is not computation but rather imagination. Math is art (became art to me).}
+%% %% Outside of class I would be equally happy exploring the woods or skateboarding through town.
+%% Still, I might have set upon one general area and let others rest as hobbies; indeed, that was the eventual plan until I discovered the field of programming languages, where these seemingly disparate interests meet.
 
+Then I discovered the field of programming languages, where the nuances of communication, assurances of formal reasoning, and practicality of computational tools all combine.
 Two years study have only confirmed this initial excitement.
 %% Rather than fade into an industry job with only a paycheck as validation, 
-I wish to study programming languages to develop tools that leverage the incredible power of computation, that make it easier for human users to succinctly express complex ideas in a language machines can understand unambiguously.
+I wish to study programming languages in pursuit of a \phd~to develop tools that leverage the power of computation to make it easier for human users to succinctly express complex ideas in a language that machines can understand.
 %% I want to be a computer scientist and research programming languages to develop tools that solve mechanizable issues and let programmers focus on the more critical problems.
 
 \section{Personal Background}
 
-The spark began with my first programming class, where I realized computer science is where creativity and efficicacy meet. 
+The spark began with my first programming class, where I realized computer science is where creativity and efficacy meet. 
 Throughout my undergraduate career I have been most engaged and successful in the free, open-ended projects which asked students to define their full scope.
 For my final project in that first course I designed and implemented a na\"ive but full-featured friend recommendation system for a model social network.
 %% This penchant for creative projects would manifest itself repeatedly in my undergraduate career.
-The following semester I built a tournament-winning AI in OCaml, and in a later class created (with a classmate) a network honeypot which analyzed packets at a rate of 76Mb/s, over seven times the class average, by means of a few clever optimizations.
+The following semester I built a tournament-winning AI in OCaml, and in a later class created (with a classmate) a network honeypot that analyzed packets at a rate of 76Mb/s, over seven times the class average, by means of a few clever optimizations.
 
 Outside of class, I took a summer job at the tech startup Rentenna, which rated apartments to help prospective tenants find their best match.
 Here I learned the basics of software engineering and had more opportunities to find creative solutions to problems.
 For example, at one point we sought to integrate data from a variety of external sources, but we could not scrape and deliver all this property-level information in real time.
-To solve this, I devised and wrote a wrapper for our database which cached results at the block or neighborhood level and refreshed lazily after a brief waiting period.
+To solve this, I designed and implemented a cache for our database that stored results at the block or neighborhood level and refreshed lazily after a brief waiting period.
 
 Overall, the fast-paced work environment was inspiring and the opportunities available were tempting; however, the experience was somewhat lacking.
 For one, the work was frequently repetitive; however, the main problem, to me, was the tone. 
-People compained about Mondays and were itching to leave every evening. 
+Employees in mine and similar similar companies complained about Mondays and were itching to leave each night.
 This was not quite the startup atmosphere I had expected.
 
 At my other job, as a teaching assistant at Cornell, things were different.
@@ -79,23 +87,26 @@ The other consultants for that course delight in coming to work; when I took the
 In turn my own feedback, received informally and through TA evaluations, has consistently been positive, especially regarding my own pervasive enthusiasm.\footnote{My favorite comment was from a Fall 2012 evaluation: ``I have to imagine that if functional programming were a person, he would want to marry it. It's adorable.''}
 
 %% TODO review, expecially the last 2
-During the 4 semesters I have been on staff, I have led recitations for a section of approximately 30 regularly attending students, played a large role in the release of 5 problem sets and the testing of 11, suggested questions for 8 exams, managed the staff version-control repository, completely rewriten the automated test harness, and spent many hours grading.
+During the 4 semesters I have been on staff, I have led recitations for a section of approximately 30 regularly attending students, played a large role in the release of 5 problem sets and the testing of 11, suggested questions for 8 exams, managed the staff version-control repository, completely rewritten the automated test harness, and spent many hours grading.
 Above all else, the experience has taught me the importance of accountability and the difference between concepts and concrete actions.
-For example another staff memeber had the great idea of requesting students submit a patch if their assignment failed to compile, as opposed to having course staff unfamiliar with the code attempt to debug it.
+For example another staff member had the great idea of requesting students submit a patch if their assignment failed to compile, as opposed to having course staff unfamiliar with the code attempt to debug it.
 This would have saved us and students a tremendous amount of effort and grief, but it remained unimplemented until a year later, when I wrote the necessary scripts and started staying up late on Thursday nights to generate students' feedback in time for the Sunday grading sessions.
 
 \section{Research}
-This growing appreciation for the academic community, coupled with the special interest I took in programming language courses ultimately guided my decision to try research.
+This growing appreciation for the academic community, coupled with the special interest I took in programming-language courses ultimately guided my decision to try research.
 Fortunately, I met Professor Ross Tate, who offered me a position over the summer.
 My work began with static analysis of existing Java programs and translated into a Masters project culminating in a PLDI submission, which is currently under review.
 
-The paper introduces a new rule for object-oriented languages, dividing the classes and interfaces used as type arguments into two distinct groups.
-However, ``new'' is in some ways a misnomer because this separation has been common practice throughout industry for years (this is what my summer analysis verified).
-We make clear a distinction between type parameters used in recursive subtyping definitions and type parameters in the traditional sense.
-This division greatly simplifies the task of type-checking with generics, providing, among other results, decidable subtyping and type equality.
+The paper introduces a ``new'' rule for object-oriented languages, dividing classes and interfaces two groups.
+It is new in the sense of discovery: the separation we identify and formalize has been common practice throughout industry for years without practitioners or researchers taking notice.
+%% I use ``new'' is in some ways a misnomer because this separation has been common practice throughout industry for years (this is what my summer analysis verified).
+We make clear a distinction between classes and interfaces used for recursive subtyping definitions and classes and interfaces used for type parameters and return types.
+This division greatly simplifies the task of type-checking with generics, providing, among other results, decidable subtyping.
+%% TODO combine next two sentences into one, talk about how tool IS being adopted.
 Previous efforts in this area had identified other restrictions, but solved the problem from an algorithmic standpoint, seem to have failed to capture programmer intuition.
 What separates our contribution is that instead of devising some new strategy or rule to impose, we draw inspiration from the developers using these languages in their daily work.
-The result, we believe, shall be more readily adopted and understood by the professionals it is meant to benefit.
+%% The result, we believe, shall be more readily adopted and understood by the professionals it is meant to benefit.
+Consequently, industry language designers are already considering adopting our restriction.
 
 Before working this summer with Ross, I had only a faint, admittedly romanticized idea of what research was like.
 My initial goal with the project was just to try something different, while the opportunity was available, and get an industry job the following year.
@@ -103,18 +114,19 @@ As it turned out, I enjoy the work.
 I like the independent nature of research, and I value the collaborative demeanour of the computer science community.
 %% Meeting the Cornell \phd~students has been a delight.
 Furthermore I enjoy the diverse quality of research. 
-The mix between experimentation, review, and writing is energizing.
+The mix between invention, experimentation, and presentation is energizing.
 Above all, I am helping find solutions to keep computer programming enjoyable and productive.
 Working with a computer should not feel like an occupation or chore.
-It is an empowering \emph{activity}, working with a tool that leverages your own intelligence and capability to their fullest.
-Researchers' task is to keep reminding others of this great potential.
+It should feel empowering, working with a tool that leverages your own intelligence and skills to their fullest.
+%% TODO make sure this is swag
+My goal as a researcher is to keep reminding others of this great potential.
 
 \section{Why a \phd}
-I have found that I do best in a high-energy environment where myraid skills and imagination come together, where new ideas are encouraged and learning is paramount.
-This is academia.
-Classes and textbooks now appear to me as living resources that offer guidance for answering unsolved questions rather the sources of pointless exercises assigned for some unclear purpose like building character.
+I have found that I do best in a high-energy environment where myriad skills and imagination come together, where new ideas are encouraged and learning is paramount.
+That is academia.
+%% Classes and textbooks now appear to me as living resources that offer guidance for answering unsolved questions rather the sources of pointless exercises assigned for some unclear purpose like building character.
 The problems I have worked on and the problems my colleagues here are working on are exciting and motivating.
-It is inspiring and humbling to work on building correct and beautiful things, rather than the popular or profitable that drive industry projects.
+It is inspiring and humbling to work on building correct and beautiful things, rather than the popular or profitable values that drive industry projects.
 
 I want to continue in this line of work, to continue improving our interactions with computers through language-level solutions.
 Barriers like cryptic error messages, insufficient means of expression, and poor feedback mechanisms prevent users from accomplishing their goals in an enjoyable or timely manner.
